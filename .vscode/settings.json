@@ -1,0 +1,12 @@
+{
+  "files.associations": {
+    "*.module": "php",
+    "ressouces.h": "c",
+    "array": "c",
+    "string": "c",
+    "string_view": "c",
+    "map.h": "c",
+    "core.h": "c",
+    "zii.h": "c"
+  }
+}
