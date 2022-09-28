@@ -1,13 +1,14 @@
-#include <ressouces.h>
+#include <resources.h>
 
-void ZII_initialize_assets()
+ZII_asset_manager ZII_initialize_assets()
 {
-  ZII_asset_manager *asset_data = gs_user_data(ZII_asset_manager);
+  ZII_asset_manager asset_manager = {0};
 
   // Loading textures
   gs_dyn_array(gs_asset_texture_t) textures = NULL;
   gs_dyn_array_push(textures, ZII_load_game_textures());
-  asset_data->textures = textures;
+  asset_manager.textures = textures;
+  return asset_manager;
 }
 
 gs_asset_texture_t ZII_load_game_textures()

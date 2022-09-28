@@ -3,6 +3,7 @@
 #include <map.h>
 #include <controls.h>
 #include <renderer.h>
+#include <resources.h>
 
 void init()
 {
@@ -11,6 +12,7 @@ void init()
   appdata->graphics = ZII_init_graphics();
   appdata->camera = gs_camera_default();
   appdata->tilemap = ZII_tilemap_init();
+  appdata->assets = ZII_initialize_assets();
 }
 
 void loop()

@@ -16,12 +16,13 @@ flags=(
 # Include directories
 inc=(
   -I../gst/third_party/include/ -I../src/include/
+  
 )
 
 # Source files
 src=(
     ../src/main.c
-    ../src/ressources.c
+    ../src/resources.c
     ../src/shaders.c
     ../src/map.c
     ../src/camera.c
