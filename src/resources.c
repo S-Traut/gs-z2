@@ -2,21 +2,17 @@
 
 ZII_asset_manager ZII_initialize_assets()
 {
+  // (TODO) Asset management system
   ZII_asset_manager asset_manager = {0};
-
-  // Loading textures
-  gs_dyn_array(gs_asset_texture_t) textures = NULL;
-  gs_dyn_array_push(textures, ZII_load_game_textures());
-  asset_manager.textures = textures;
   return asset_manager;
 }
 
-gs_asset_texture_t ZII_load_game_textures()
+gs_handle_gs_graphics_texture_t ZII_load_game_textures()
 {
   const char *texture_file = "assets/game_atlas.png";
   int w, h, c;
   void *tex_data;
-  gs_util_load_texture_data_from_file("assets/texture.png", &w, &h, &c, &tex_data, 1);
+  gs_util_load_texture_data_from_file("assets/game_atlas.jpg", &w, &h, &c, &tex_data, 0);
   gs_graphics_texture_desc_t texture_desc = {
       .data = tex_data,
       .width = w,
@@ -26,8 +22,5 @@ gs_asset_texture_t ZII_load_game_textures()
       .mag_filter = GS_GRAPHICS_TEXTURE_FILTER_NEAREST,
   };
 
-  return (gs_asset_texture_t){
-      .desc = texture_desc,
-      .hndl = gs_graphics_texture_create(&texture_desc),
-  };
+  return gs_graphics_texture_create(&texture_desc);
 }

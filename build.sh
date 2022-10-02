@@ -24,7 +24,7 @@ src=(
     ../src/main.c
     ../src/resources.c
     ../src/shaders.c
-    ../src/map.c
+    ../src/tilemap.c
     ../src/camera.c
     ../src/graphics.c
     ../src/core.c
@@ -41,6 +41,6 @@ libs=(
 )
 
 # Build
-gcc -O3 ${lib_dirs[*]} ${libs[*]} ${inc[*]} ${src[*]} ${flags[*]} -lm -o App
+gcc ${lib_dirs[*]} ${libs[*]} ${inc[*]} ${src[*]} ${flags[*]} -lm -o App
 
 cd ..

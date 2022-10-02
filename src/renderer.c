@@ -46,7 +46,7 @@ void ZII_render_frame(ZII_appdata_t *app)
   gs_graphics_begin_render_pass(cb, GS_GRAPHICS_RENDER_PASS_DEFAULT);
 
   gs_graphics_clear(cb, &clear_description);
-  gs_graphics_draw_desc_t draw_desc = {.start = 0, .count = 6400};
+  gs_graphics_draw_desc_t draw_desc = {.start = 0, .count = 6500};
   gs_graphics_bind_pipeline(cb, app->graphics.pipeline);
   gs_graphics_apply_bindings(cb, &binds);
   gs_graphics_draw(cb, &draw_desc);

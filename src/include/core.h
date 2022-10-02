@@ -3,7 +3,7 @@
 
 #include <gs/gs.h>
 #include <graphics.h>
-#include <map.h>
+#include <tilemap.h>
 #include <resources.h>
 
 typedef struct ZII_appdata_t
@@ -16,5 +16,6 @@ typedef struct ZII_appdata_t
 
 void init();
 void loop();
+void shutdown();
 
 #endif

@@ -8,6 +8,7 @@ gs_app_desc_t gs_main(int32_t argc, char **argv)
   return (gs_app_desc_t){
       .init = init,
       .update = loop,
+      .shutdown = shutdown,
       .window_title = "GST ZELDA II",
       .user_data = &game_data,
   };
