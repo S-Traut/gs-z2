@@ -12,7 +12,7 @@ gs_handle_gs_graphics_texture_t ZII_load_game_textures()
   const char *texture_file = "assets/game_atlas.png";
   int w, h, c;
   void *tex_data;
-  gs_util_load_texture_data_from_file("assets/game_atlas.jpg", &w, &h, &c, &tex_data, 0);
+  gs_util_load_texture_data_from_file("assets/atlas.png", &w, &h, &c, &tex_data, 0);
   gs_graphics_texture_desc_t texture_desc = {
       .data = tex_data,
       .width = w,

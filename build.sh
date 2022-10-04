@@ -41,6 +41,6 @@ libs=(
 )
 
 # Build
-gcc ${lib_dirs[*]} ${libs[*]} ${inc[*]} ${src[*]} ${flags[*]} -lm -o App
+gcc -g ${lib_dirs[*]} ${libs[*]} ${inc[*]} ${src[*]} ${flags[*]} -lm -o App
 
 cd ..
